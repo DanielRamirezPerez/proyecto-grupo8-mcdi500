@@ -62,10 +62,11 @@ Cada tipo de documento va en su propia subcarpeta, para no mezclar archivos:
 ## Convención de commits
 Prefijos usados: `docs`, `data`, `feat`, `fix`, `test`.
 Ejemplos:
-- `docs: agrega mapa conceptual v1 y v2`
-- `data: incorpora dataset mental_health_and_technology_usage_2024.csv`
-- `feat: implementa funciones de preprocesamiento`
-- `test: valida nulos, duplicados y rangos del dataset procesado`
+- `docs: subes o editas documentación: README, mapa conceptual, informe, comentarios.`
+- `data: agregas o actualizas el dataset (archivos de datos, diccionario de variables).`
+- `feat: implementas una función, notebook o análisis nuevo.`
+- `fix: corriges un error en el código o en los datos.`
+- `test: agregas o corres validaciones (nulos, duplicados, rangos, tipos de dato)`
 
 ## Decisiones técnicas
 - **Limpieza:** [completar: qué encontraron al revisar nulos/duplicados/rangos]
