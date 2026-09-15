@@ -5,10 +5,10 @@ sociales, videojuegos) y los indicadores de salud mental, estrés y calidad del
 sueño, mediante un flujo de trabajo reproducible, documentado y colaborativo.
 
 ## Integrantes
-- Abigail Roblez Chavez (@usuario-github)
-- Daniel Pérez Ramirez (@usuario-github)
-- Matias Manriquez Ortiz (@usuario-github)
-- Roberto Sánchez Saldivia (@usuario-github)
+- Abigail Roblez Chavez (@abda-abigail-github)
+- Daniel Pérez Ramirez (@danielramirezdr114-dev-github)
+- Matias Manriquez Ortiz (@matiasIMO98-github)
+- Roberto Sánchez Saldivia (@quiltroconiphone-github)
 
 ## Datos
 - **Fuente:** Kaggle — *Mental Health and Technology Usage Dataset* (autor: waqi786).
