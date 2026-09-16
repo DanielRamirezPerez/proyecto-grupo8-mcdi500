@@ -7,7 +7,7 @@ sueño, mediante un flujo de trabajo reproducible, documentado y colaborativo.
 ## Integrantes
 - Abigail Roblez Chávez (@abda-abigail-github)
 - Daniel Pérez Ramirez (@DanielRamirezPerez-github)
-- Matias Manriquez Ortiz (@mMatiasManriquezO-github)
+- Matias Manriquez Ortiz (@MatiasManriquezO-github)
 - Roberto Sánchez Saldivia (@RobertSanchezS-github)
 
 ## Datos
@@ -28,12 +28,18 @@ proyecto-grupo8-mcdi500/
 │  └─ notebooks/
 │     └─ S1_F1_Definicion.ipynb        Fase 1 — definición del problema y entorno
 ├─ F2/
+│  ├─ data/processed/                  dataset limpio y transformado
 │  └─ S1_F2_Preprocesamiento.ipynb     Fase 2 — obtención, limpieza y transformación
+├─ F3/                                 Fase 3 (pendiente)
+├─ F4/                                 Fase 4 (pendiente)
+├─ src/
+│  └─ procesamiento.py                 funciones reutilizables (carga, diagnóstico, transformación, validación)
 ├─ docs/
 │  ├─ Mapa Conceptual Proyecto/
 │  ├─ Informe/
 │  └─ Referencias/                     (crear cuando corresponda)
 ├─ requirements.txt                    dependencias del proyecto (único, en la raíz)
+├─ .gitignore                          qué queda fuera del control de versiones
 └─ README.md                           este archivo
 ```
 
@@ -60,12 +66,33 @@ Cada tipo de documento va en su propia subcarpeta, para no mezclar archivos:
 - `docs/Referencias/` (crear si se necesita)
 
 ## Convención de commits
-Prefijos usados: `docs`, `data`, `feat`, `fix`, `test`.
-Ejemplos:
-- `docs: agrega mapa conceptual v1 y v2`
-- `data: incorpora dataset mental_health_and_technology_usage_2024.csv`
-- `feat: implementa funciones de preprocesamiento`
-- `test: valida nulos, duplicados y rangos del dataset procesado`
+
+Cada commit debe empezar con un prefijo que indique el **tipo de cambio**, seguido
+de dos puntos y una descripción breve en presente. Lo que decide el prefijo es
+**qué archivo cambia y por qué**, no si el cambio "corrige algo" o no.
+
+### Definición de cada prefijo
+
+| Prefijo | Úsalo cuando... | No lo uses para... |
+|---|---|---|
+| `docs` | subes o editas documentación: README, mapa conceptual, informe, comentarios explicativos, bitácora de decisiones | cambios en el dataset o en código ejecutable (aunque el archivo sea texto) |
+| `data` | agregas, actualizas o reemplazas el dataset (archivos de datos, diccionario de variables, fuente/licencia) | limpiar o transformar el dataset dentro del código (eso es `feat` o `fix`) |
+| `feat` | implementas algo nuevo: una función, un notebook, un análisis, una carpeta de fase | corregir algo que ya existía y no funcionaba (eso es `fix`) |
+| `fix` | corriges un error real en el código, en la estructura de archivos o en los datos (duplicados, rutas rotas, archivos que no debían subirse) | mejorar redacción o completar información en documentación (eso es `docs`) |
+| `test` | agregas o ejecutas validaciones (nulos, duplicados, rangos, tipos de dato, casos límite) | escribir la función que se está validando (eso es `feat`) |
+
+### Ejemplos de commits
+
+| Prefijo | Mensaje de commit | Qué cambia realmente |
+|---|---|---|
+| `docs` | `docs: agrega mapa conceptual v1 y v2` | se sube un archivo de documentación (imagen del mapa) |
+| `docs` | `docs: actualiza README con estructura completa` | se edita texto explicativo, no código ni datos |
+| `data` | `data: incorpora dataset mental_health_and_technology_usage_2024.csv` | se agrega el archivo de datos original |
+| `feat` | `feat: implementa funciones de preprocesamiento` | se escribe código nuevo (funciones en `src/procesamiento.py`) |
+| `feat` | `feat: crea estructura de carpetas F3 y F4` | se crea algo que no existía antes en el proyecto |
+| `fix` | `fix: elimina requirements.txt duplicados en F1 y F2` | se corrige un problema real en la estructura de archivos |
+| `fix` | `fix: agrega .gitignore y elimina archivos .DS_Store` | se corrige algo que no debía estar versionado |
+| `test` | `test: valida nulos, duplicados y rangos del dataset procesado` | se ejecutan validaciones sobre datos ya existentes |
 
 ## Decisiones técnicas
 - **Limpieza:** [completar: qué encontraron al revisar nulos/duplicados/rangos]
